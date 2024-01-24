@@ -33,5 +33,7 @@
             <a href=""><img src="https://i0.wp.com/walhijakarta.org/wp-content/uploads/2022/11/cropped-cropped-logo-500-x-300.png?fit=300%2C180&ssl=1" alt=""></a>
         </div>
     </div>
-    <div class="container2"></div>
+    <div class="container2">
+        <a href=""><i class="fa-regular fa-copyright"></i> 2024 Menapak indonesia</a>
+    </div>
 </footer>
