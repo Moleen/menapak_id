@@ -15,3 +15,10 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/program', function () {
+    return view('program');
+});
+Route::get('/about', function () {
+    return view('program');
+});
+

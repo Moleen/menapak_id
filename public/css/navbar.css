@@ -1,9 +1,9 @@
 * {
     margin: 0;
     font-family: "League Spartan", sans-serif;
-  }
-  
-  .nav {
+}
+
+.nav {
     top: 0;
     opacity: 1;
     position: fixed;
@@ -15,54 +15,53 @@
     z-index: 2;
     background-color: white;
     transition: all 0.5s;
-  }
-  
-  .logo {
+}
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
-  }
-  
-  .logo img {
+}
+
+.logo img {
     margin-right: 25px;
     height: 80px;
     width: 90px;
-  }
-  .logo a {
+}
+.logo a {
     margin-right: 25px;
     height: 80px;
     width: 90px;
-  }
-  .logo p {
+}
+.logo p {
     font-size: 20px;
-  }
-  .logo a {
+}
+.logo a {
     text-decoration: none;
     color: black;
-  }
-  
-  .menu {
+}
+
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-  }
-  
-  .menu li {
+}
+
+.menu li {
     list-style: none;
-  }
-  
-  .menu li a {
+}
+
+.menu li a {
     text-decoration: none;
     color: black;
     font-size: 20px;
     padding: 20px;
-  }
-  .menu li .active {
+}
+.nav-item a.active {
     text-decoration: none;
     color: rgb(0, 151, 81);
     font-size: 20px;
     padding: 20px;
-  }
-  
+}

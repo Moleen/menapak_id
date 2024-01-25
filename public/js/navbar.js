@@ -14,9 +14,11 @@ window.addEventListener("scroll", function() {
   });
   
   
-      document.querySelectorAll(".nav-item").forEach((link) => {
-      if (window.location.href.include(link.href)) {
-          link.classList.add("active");
-      }
+  document.querySelectorAll(".nav-item").forEach((link) => {
+    const href = link.querySelector('a').getAttribute('href');
+    
+    if (window.location.pathname === href) {
+      link.querySelector('a').classList.add("active");
+    }
   });
-  
+
