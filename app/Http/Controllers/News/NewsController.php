@@ -67,7 +67,7 @@ class NewsController extends Controller
                 'dibaca' => $nws->dibaca,
                 'news_details' => $baru->news_details,
                 'nama_kategori' => $baru->nama_kategori,
-            ]
+            ];
         }
 
         return $det;
