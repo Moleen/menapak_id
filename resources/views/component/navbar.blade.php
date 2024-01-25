@@ -8,9 +8,9 @@
         <p><a href="">Berjalan sambil membuat jalan</a></p>
     </div>
     <div class="menu">
-        <li><a href="beranda.php" class='active'>Beranda</a></li>
-        <li><a href="">Program</a></li>
-        <li><a href="">Tentang Kami</a></li>
+        <li class ="nav-item"><a  href="/">Beranda</a></li>
+        <li class ="nav-item"><a  href="/program">Program</a></li>
+        <li class ="nav-item"><a  href="/about">Tentang Kami</a></li>
     </div>
 </nav>
 <script src="{{asset('js/navbar.js')}}"></script>
