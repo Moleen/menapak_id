@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//BERITA
+Route::get('/news', [NewsController::class, 'index']);
+Route::post('/news/add', [NewsController::class, 'add']);
+Route::get('/news/{slug}', [NewsController::class, 'detail']);
+Route::post('/news/edit/{id_news}', [NewsController::class, 'edit']);
+Route::delete('/news/del/{id_news}', [NewsController::class, 'delete']);
