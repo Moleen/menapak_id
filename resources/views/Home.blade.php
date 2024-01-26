@@ -101,24 +101,25 @@
       <div class="sub1">
         <h1 class="judulsub">Berita</h1>
         <div class="continerberita">
-          @if ($data) @foreach($data as $dt)
-          <div class="berita">
-            <a href="" class="imagehref"><img src="img/1.jpg" alt="" /></a>
-            <a href="{{url('news/' . $dt['slug'])}}" class="judulhref">
-              <h1>{{$dt['news_title']}}</h1>
-              <p>{{substr($dt['news_details'],0,100)}}...</p>
-              <div class="calendar">
-                <p>
-                  <i class="fa-regular fa-calendar-days"></i>
-                  {{$dt['published_date']}}
-                </p>
-                <p><i class="fa-regular fa-eye"></i> x1</p>
-              </div>
-            </a>
-          </div>
-          @endforeach @else
-          <p>No data available.</p>
-          @endif
+          @if ($data)
+                @foreach($data as $dt)
+                <div class="berita">
+                    <a href="" class="imagehref"><img src="img/1.jpg" alt="" /></a>
+                    <a href="{{url('news/' . $dt['slug'])}}" class="judulhref">
+                        <h1>{{$dt['news_title']}}</h1>
+                        <p>
+                            {{substr($dt['news_details'],0,100)}}...
+                        </p>
+                        <div class="calendar">
+                            <p><i class="fa-regular fa-calendar-days"></i> {{$dt['updated_at']}}</p>
+                            <p><i class="fa-regular fa-eye"></i> x1</p>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            @else
+                <p>No data available.</p>
+            @endif
         </div>
       </div>
       <div class="sub2">
