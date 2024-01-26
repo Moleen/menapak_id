@@ -7,8 +7,8 @@
 
     <title>Document</title>
   </head>
+  @include('component.navbar')
   <body>
-    @include('component.navbar')
     <div class="slider-container">
       <div id="slider" class="slider">
         <div class="slide">
@@ -62,27 +62,35 @@
     <!-- content 1 -->
     <div class="content1">
       <div class="sub1">
-        <div class="title1"><h1>Tata Kelola Kawasan</h1></div>
+        <div class="title1"><h2>Tata Kelola Kawasan</h2></div>
         <a href="" class="kawasan"></a>
       </div>
       <div class="sub2">
         <div class="title2">
-          <a href=""><img src="img/1.jpg" alt="" /></a>
-          <a href=""><p>Penelitian</p></a>
+          <a href=""
+            ><img src="img/1.jpg" alt="" />
+            <p>Penelitian</p></a
+          >
         </div>
         <div class="title3">
-          <a href=""><img src="img/2.jpg" alt="" /></a>
-          <a href=""><p>Pengelolaan SDA</p></a>
+          <a href=""
+            ><img src="img/1.jpg" alt="" />
+            <p>Penelitian</p></a
+          >
         </div>
       </div>
       <div class="sub3">
         <div class="title4">
-          <a href=""><img src="img/2.jpg" alt="" /></a>
-          <a href=""><p>Peningkatan Kapasitas</p></a>
+          <a href=""
+            ><img src="img/1.jpg" alt="" />
+            <p>Penelitian</p></a
+          >
         </div>
         <div class="title5">
-          <a href=""><img src="img/2.jpg" alt="" /></a>
-          <a href=""><p>Advokasi Kebijakan</p></a>
+          <a href=""
+            ><img src="img/1.jpg" alt="" />
+            <p>Penelitian</p></a
+          >
         </div>
       </div>
     </div>
@@ -134,7 +142,7 @@
     </div>
 
     <!-- end content 2 -->
+    @include('component.footer')
   </body>
-  @include('component.footer')
   <script src="{{asset('js/beranda.js')}}"></script>
 </html>

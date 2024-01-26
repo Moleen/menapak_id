@@ -82,3 +82,9 @@ footer {
     width: auto;
     object-fit: contain;
 }
+
+@media only screen and (max-width: 900px) {
+    footer .container1{
+        flex-wrap: wrap;
+    }
+}
