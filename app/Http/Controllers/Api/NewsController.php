@@ -46,6 +46,7 @@ class NewsController extends Controller
         $news->id_admin = $id_admin;
         $news->published_date = $published_date;
         $news->thumbnail = $thumb;
+        $news->dibaca = "0";
         $news->save();
 
         return response()->json([
