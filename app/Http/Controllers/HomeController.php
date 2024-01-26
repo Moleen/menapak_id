@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use App\Http\Controllers\News\NewsController;
+use App\Http\Controllers\NewsController;
 
 class HomeController extends Controller
 {

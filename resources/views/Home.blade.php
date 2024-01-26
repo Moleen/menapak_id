@@ -103,7 +103,7 @@
                             {{substr($dt['news_details'],0,100)}}...
                         </p>
                         <div class="calendar">
-                            <p><i class="fa-regular fa-calendar-days"></i> {{$dt['published_date']}}</p>
+                            <p><i class="fa-regular fa-calendar-days"></i> {{$dt['updated_at']}}</p>
                             <p><i class="fa-regular fa-eye"></i> x1</p>
                         </div>
                     </a>
