@@ -7,8 +7,8 @@
 
     <title>Document</title>
   </head>
-  @include('component.navbar')
   <body>
+    @include('component.navbar')
     <div class="slider-container">
       <div id="slider" class="slider">
         <div class="slide">
@@ -132,8 +132,4 @@
   </body>
   @include('component.footer')
   <script src="{{asset('js/beranda.js')}}"></script>
-  <script
-    src="https://kit.fontawesome.com/4e981ecd7b.js"
-    crossorigin="anonymous"
-  ></script>
 </html>
