@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    font-family: "League Spartan", sans-serif;
+}
+
+nav {
+    opacity: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    transition: all 0.5s;
+    height: 100px;
+    z-index: 2;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo img {
+    height: 80px;
+    width: 90px;
+}
+
+.logo p {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.nav-item a.active {
+    text-decoration: none;
+    color: rgb(0, 151, 81);
+    font-size: 20px;
+}
+nav .menu-icon{
+    display: none;
+}
+.hover{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.925);
+    z-index: 1;
+    top: 100px;
+    transform: translatex(100%); 
+    transition: ease-in-out 0.5s;
+}
+.hover li{
+    list-style: none;
+    padding: 10px;
+}
+
+.hover li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 900px){
+nav ul{
+    display: none;
+}
+nav .menu-icon{
+    display: flex;
+    margin-right: 20px;
+}
+
+.hover.hidden{
+    transform: translateY(0px);
+}
+}
+

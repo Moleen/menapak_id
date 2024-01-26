@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('news_details');
             $table->integer('id_kategori');
             $table->integer('id_admin');
+            $table->integer('dibaca');
             $table->date('published_date')->nullable();
             $table->text('thumbnail');
             $table->timestamps();

@@ -1,0 +1,84 @@
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+}
+
+.container1 {
+    width: 100%;
+    height: 85%;
+    background-color: #2D3A29;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container2 {
+    width: 100%;
+    height: 15%;
+    background-color: #43553E;
+    display: flex;
+    align-items: center;
+}
+
+.container2 a{
+    font-size: 14px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.alamat,
+.tautan,
+.ikuti,
+.kontak,
+.mitra {
+    margin: auto;
+    width: 200px;
+    height: 50%;
+}
+
+.alamat h1,
+.tautan h1,
+.ikuti h1,
+.kontak h1,
+.mitra h1{
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.alamat p{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    padding: 10px;
+}
+
+.alamat p i {
+    margin-right: 10px;
+}
+
+.tautan p,
+.kontak p,
+.ikuti p {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.tautan a,
+.kontak a,
+.ikuti a {
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.mitra img{
+    background-color: aliceblue;
+    padding: 5px;
+    margin: 0px 0px 5px 10px;
+    height: 20%;
+    width: auto;
+    object-fit: contain;
+}
