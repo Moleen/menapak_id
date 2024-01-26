@@ -19,7 +19,6 @@ nav {
 
 .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin-left: 50px;
 }
@@ -42,6 +41,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 50px;
 }
 
 nav ul li {
@@ -59,10 +59,10 @@ nav ul li a {
     color: rgb(0, 151, 81);
     font-size: 20px;
 }
-nav .menu-icon{
+nav .menu-icon {
     display: none;
 }
-.hover{
+.hover {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -70,31 +70,46 @@ nav .menu-icon{
     background-color: rgba(255, 255, 255, 0.925);
     z-index: 1;
     top: 100px;
-    transform: translatex(100%); 
+    transform: translatex(100%);
     transition: ease-in-out 0.5s;
 }
-.hover li{
+.hover li {
     list-style: none;
     padding: 10px;
 }
 
-.hover li a{
+.hover li a {
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
 
-@media only screen and (max-width: 900px){
-nav ul{
-    display: none;
-}
-nav .menu-icon{
-    display: flex;
-    margin-right: 20px;
+@media only screen and (max-width: 900px) {
+    .logo {
+        margin-left: 20px;
+    }
+    .logo img{
+        height: 70px;
+        width: 80px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav .menu-icon {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .hover.hidden {
+        transform: translateY(0px);
+    }
 }
 
-.hover.hidden{
-    transform: translateY(0px);
+@media only screen and (max-width: 720px) {
+    .logo{
+        margin-left: 20px;
+    }
+    .logo p {
+        width: 50%;
+    }
 }
-}
-
