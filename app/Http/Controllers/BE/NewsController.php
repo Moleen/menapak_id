@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\News;
+namespace App\Http\Controllers\BE;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\News;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
     public function index(){
-        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')
-        ->join('admin', 'admin.id_admin', '=', 'news.id_admin')->where('slug', $slug)->get();
-        
+        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->get();
+
         $data = [];
 
         foreach ($news as $baru) {
@@ -41,7 +41,7 @@ class NewsController extends Controller
         $thumb = $thumbnail->getClientOriginalName();
 
         Storage::put('img/news/' . $thumb, file_get_contents($thumbnail));
-        
+
         $news = new News;
         $news->news_title = $news_title;
         $news->slug = $slug;
@@ -76,11 +76,11 @@ class NewsController extends Controller
 
     function editView($id_news){
         $editview = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')
-        ->join('admin', 'admin.id_admin', '=', 'news.id_admin')->where('slug', $slug)->get();
+        ->join('admin', 'admin.id_admin', '=', 'news.id_admin')->where('id_news', $id_news)->get();
 
         $deta = [];
 
-        foreach($newss as $nwss){
+        foreach($editview as $nwss){
             $deta[] = [
                 'judul' => $nwss->news_title,
                 'published_date' => $nwss->published_date,
@@ -108,24 +108,24 @@ class NewsController extends Controller
 
             $thumb = $thumbnail->getClientOriginalName();
 
-            $gbr = News::where('thumbnail', $editnews->thumbnail)->first();
+            $gbr = News::where('thumbnail', $berita->thumbnail)->first();
 
             if ($gbr) {
-                Storage::delete('img/news/' . $editnews->thumbnail);
+                Storage::delete('img/news/' . $berita->thumbnail);
             } else {
                 Storage::put('img/news/' . $thumb, file_get_contents($thumbnail));
             }
 
-            $editnews->news_title = $news_title;
-            $editnews->slug = $slug;
-            $editnews->news_details = $news_details;
-            $editnews->id_kategori = $id_kategori;
-            $editnews->id_admin = $id_admin;
-            $editnews->published_date = $published_date;
-            $editnews->thumbnail = $thumb;
-            $editnews->save();
+            $berita->news_title = $news_title;
+            $berita->slug = $slug;
+            $berita->news_details = $news_details;
+            $berita->id_kategori = $id_kategori;
+            $berita->id_admin = $id_admin;
+            $berita->published_date = $published_date;
+            $berita->thumbnail = $thumb;
+            $berita->save();
 
-            return $editnews;
+            return $berita;
         }else{
             echo "Tidak ada data";
         }
