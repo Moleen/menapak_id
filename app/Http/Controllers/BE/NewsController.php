@@ -65,7 +65,7 @@ class NewsController extends Controller
             $det[] = [
                 'judul' => $nws->news_title,
                 'published_date' => $nws->published_date,
-                'dibaca' => $nws->dibaca,
+                'dibaca' => $nws->dibaca + 1,
                 'news_details' => $nws->news_details,
                 'nama_kategori' => $nws->nama_kategori,
             ];
