@@ -14,8 +14,13 @@ return new class extends Migration
         Schema::create('kegiatan', function (Blueprint $table) {
             $table->increments('id_kegiatan');
             $table->string('nama_kegiatan');
-            $table->date('tgl_kegiatan');
-            $table->time('jam_kegiatan');
+            $table->string('deskripsi_kegiatan');
+            $table->string('jenis_kegiatan');
+            $table->integer('durasi');
+            $table->date('tgl_mulai');
+            $table->date('tgl_selesai');
+            $table->string('status_kegiatan');
+            $table->text('foto_kegiatan');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });
