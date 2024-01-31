@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->increments('id_admin');
-            $table->string('username', 20);
+            $table->string('username');
             $table->text('password');
-            $table->string('email', 50);
-            $table->string('nama_admin', 55);
-            $table->timestamps();
-        });//
+            $table->string('email');
+            $table->string('nama_admin');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+        });
     }
 
     /**
