@@ -1,0 +1,48 @@
+.menu-icon {
+  width: 2.2vw;
+  height: 2vw;
+  margin: auto;
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5%;
+}
+
+.menu-icon span {
+  position: absolute;
+  display: block;
+  height: 10%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #000000;
+  transform: rotate(0);
+  transition: ease-in-out 0.5s;
+  padding: 1% 0;
+}
+
+span.one {
+  top: 0px;
+}
+
+span.two {
+  top: 50%;
+}
+
+span.three {
+  top: 100%;
+}
+.clicked .one {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.clicked .two {
+  opacity: 0;
+}
+
+.clicked .three {
+  top: 50%;
+  transform: rotate(-45deg);
+}

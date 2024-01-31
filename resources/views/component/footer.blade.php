@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{'css/footer.css'}}">
 <footer>
-    <div class="container1">
+    <div class="footer1">
         <div class="alamat">
             <h1>Alamat</h1>
             <p><i class="fa-solid fa-location-dot"></i>  Jl. Murjani II, Gang Lestari, RT 12, Karang Ambun, Tanjung Redeb, Berau, Kalimantan Timur</p>
@@ -33,7 +33,7 @@
             <a href=""><img src="https://i0.wp.com/walhijakarta.org/wp-content/uploads/2022/11/cropped-cropped-logo-500-x-300.png?fit=300%2C180&ssl=1" alt=""></a>
         </div>
     </div>
-    <div class="container2">
+    <div class="footer2">
         <a href=""><i class="fa-regular fa-copyright"></i> 2024 Menapak indonesia</a>
     </div>
 </footer>
