@@ -1,28 +1,29 @@
 footer {
     width: 100%;
-    height: 300px;
-    background-color: aqua;
+    height: 20vw;
+    background-color: #2d3a29;
+    position: absolute;
 }
 
-.container1 {
-    width: 100%;
+.footer1 {
+    position: relative;
     height: 85%;
-    background-color: #2D3A29;
+    background-color: #2d3a29;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.container2 {
+.footer2 {
     width: 100%;
     height: 15%;
-    background-color: #43553E;
+    background-color: #43553e;
     display: flex;
     align-items: center;
 }
 
-.container2 a{
-    font-size: 14px;
-    margin-left: 50px;
+.footer2 a {
+    font-size: 1vw;
+    margin-left: 2.5%;
     color: white;
     text-decoration: none;
 }
@@ -32,59 +33,119 @@ footer {
 .ikuti,
 .kontak,
 .mitra {
-    margin: auto;
-    width: 200px;
-    height: 50%;
+    width: 15%;
+    height: 40%;
 }
 
 .alamat h1,
 .tautan h1,
 .ikuti h1,
 .kontak h1,
-.mitra h1{
-    padding: 10px;
+.mitra h1 {
+    margin: 5%;
     color: white;
-    font-size: 24px;
+    font-size: 1.5vw;
 }
 
-.alamat p{
+.alamat p {
     color: white;
     display: flex;
-    justify-content: space-between;
-    text-align: justify;
-    padding: 10px;
+    margin: 5%;
+    font-size: 1vw;
 }
 
 .alamat p i {
-    margin-right: 10px;
+    margin-right: 5%;
 }
 
 .tautan p,
 .kontak p,
 .ikuti p {
-    padding: 10px;
+    font-size: 1vw;
     display: flex;
     flex-direction: column;
+    margin: 5%;
 }
 .tautan a,
 .kontak a,
 .ikuti a {
-    margin-bottom: 10px;
+    margin-bottom: 5%;
     color: white;
     text-decoration: none;
 }
 
-.mitra img{
+.mitra img {
     background-color: aliceblue;
-    padding: 5px;
-    margin: 0px 0px 5px 10px;
-    height: 20%;
+    margin: 0px 0px 1% 2.5%;
+    height: 25%;
     width: auto;
     object-fit: contain;
 }
 
 @media only screen and (max-width: 900px) {
-    footer .container1{
+    footer{
+        height: auto;
+    }
+    .footer2 a{
+        padding: 2%;
+        margin: auto;
+        font-size: 1.5vw;
+    }
+    .footer1 {
+        margin: 2.5% 5%;
         flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .alamat {
+        width: 100%;
+        margin: 1.5%;
+        padding: 0;
+    }
+
+    .ikuti,
+    .kontak,
+    .mitra,
+    .tautan {
+        width: 45%;
+        margin: 1.5%;
+    }
+
+    .tautan a,
+    .kontak a,
+    .ikuti a {
+        margin: 2.5% 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    .alamat h1 {
+        margin: 1.5%;
+        font-size: 3vw;
+    }
+    
+    .tautan h1,
+    .ikuti h1,
+    .kontak h1,
+    .mitra h1{
+        font-size: 3vw;
+        margin: 3%;
+    }
+    .alamat p
+    {
+        margin: 1.5%;
+        font-size: 2vw;
+    }
+    .tautan p,
+    .ikuti p,
+    .kontak p,
+    .mitra p {
+        font-size: 2vw;
+        margin: 3%;
+    }
+
+    .footer1 .mitra a img {
+        height: 4vw;
     }
 }

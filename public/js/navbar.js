@@ -28,17 +28,9 @@ document.querySelectorAll(".nav-item").forEach((link) => {
 });
 
 const hover = document.querySelector(".hover")
-var menuList = document.getElementById("burger1");
-menuList.addEventListener("change", ()=>{
-    if(menuList.checked == true){
-        hover.classList.add("hidden")
-    }else{
-        hover.classList.remove("hidden")
-    }
-})
-
-// const menuIcon = document.getElementById("menu-icon");
-// const menuList = document.querySelector(".hover");
-// menuIcon.addEventListener("click", () => {
-//     menuList.classList.toggle("hidden");
-// });
+var menuList = document.querySelector(".menu-icon");
+menuList.addEventListener('click', function() {
+    // Toggle kelas 'active' pada tombol hamburger
+    this.classList.toggle('clicked');
+    hover.classList.toggle('hidden');
+  });

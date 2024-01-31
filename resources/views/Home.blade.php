@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('css/beranda.css')}}" />
-
     <title>Document</title>
   </head>
   @include('component.navbar')
@@ -54,59 +53,67 @@
           </a>
         </div>
       </div>
-
       <button class="prev-btn"><</button>
       <button class="next-btn">></button>
     </div>
-
-    <!-- content 1 -->
-    <div class="content1">
+    <div class="container1">
       <div class="sub1">
-        <div class="title1"><h2>Tata Kelola Kawasan</h2></div>
-        <a href="" class="kawasan"></a>
+        <a class="title1" href="">
+          <h2>Tata Kelola Kawasan</h2>
+          <div class="kawasan"></div>
+        </a>
       </div>
       <div class="sub2">
         <div class="title2">
           <a href=""
-            ><img src="img/1.jpg" alt="" />
-            <p>Penelitian</p></a
-          >
+            ><p>Penelitian</p>
+            <img src="img/1.jpg" alt=""
+          /></a>
         </div>
         <div class="title3">
           <a href=""
-            ><img src="img/1.jpg" alt="" />
-            <p>Penelitian</p></a
-          >
+            ><p>Pengolahan SDA</p>
+            <img src="img/2.jpg" alt=""
+          /></a>
         </div>
       </div>
       <div class="sub3">
         <div class="title4">
           <a href=""
-            ><img src="img/1.jpg" alt="" />
-            <p>Penelitian</p></a
-          >
+            ><p>Peningkatan Kapasitas</p>
+            <img src="img/3.jpg" alt=""
+          /></a>
         </div>
         <div class="title5">
           <a href=""
-            ><img src="img/1.jpg" alt="" />
-            <p>Penelitian</p></a
-          >
+            ><p>Advokasi Kebijakan</p>
+            <img src="img/1.jpg" alt=""
+          /></a>
         </div>
       </div>
     </div>
-    <!-- end content 1 -->
+    <!-- end container 1 -->
 
-    <!-- content 2 -->
-    <div class="content2">
+    <div class="container2">
       <div class="sub1">
-        <h1 class="judulsub">Berita</h1>
+        <h2 class="judulsub">Berita</h2>
         <div class="continerberita">
           @if ($data) @foreach($data as $dt)
           <div class="berita">
-            <a href="" class="imagehref"><img src="img/1.jpg" alt="" /></a>
-            <a href="{{url('news/' . $dt['slug'])}}" class="judulhref">
-              <h1>{{$dt['news_title']}}</h1>
-              <p>{{substr($dt['news_details'],0,100)}}...</p>
+            <div class="imagehref">
+              <a href=""><img src="img/1.jpg" alt="" /></a>
+            </div>
+            <div class="judulhref">
+              <h2>
+                <a href="{{url('news/' . $dt['slug'])}}">
+                  {{$dt['news_title']}}</a
+                >
+              </h2>
+              <p>
+                <a href="{{url('news/' . $dt['slug'])}}"
+                  >{{substr($dt['news_details'],0,100)}}...</a
+                >
+              </p>
               <div class="calendar">
                 <p>
                   <i class="fa-regular fa-calendar-days"></i>
@@ -114,21 +121,23 @@
                 </p>
                 <p><i class="fa-regular fa-eye"></i> x1</p>
               </div>
-            </a>
+            </div>
           </div>
           @endforeach @else
           <p>No data available.</p>
           @endif
         </div>
+        <a href="" class="selengkap"
+          >selengkapnya<i class="fa-solid fa-chevron-right fa-1x"></i
+        ></a>
       </div>
       <div class="sub2">
         <div class="title1">
-          <h1>Produk Komunitas</h1>
-          <div class="containerimg221">
-            <a href="">
-              <img src="img/1.jpg" alt="" />
-            </a>
-          </div>
+          <h2>Produk Komunitas</h2>
+          <a href="">
+            <img src="img/1.jpg" alt="">
+            <p>Lihat lebih banyak</p>
+          </a>
         </div>
         <div class="title2">
           <a href=""><h1>Produk Pengetahuan</h1></a>
@@ -137,11 +146,14 @@
           <a href=""><h1>Wilayah Kerja</h1></a>
         </div>
       </div>
-      <div class="sub3"></div>
+      <div class="sub3">
+        <h1>Instagram</h1>
+        <div class="sub3container">
+          <!-- instagram -->
+        </div>
+      </div>
     </div>
-
-    <!-- end content 2 -->
-    @include('component.footer')
   </body>
-  <script src="{{asset('js/beranda.js')}}"></script>
+  @include('component.footer')
+  <script src="js/beranda.js"></script>
 </html>
