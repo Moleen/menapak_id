@@ -1,6 +1,10 @@
 * {
     margin: 0;
 }
+body{
+    position: relative;
+    top: 5vw;
+}
 
 a {
     text-decoration: none;
@@ -154,6 +158,7 @@ a {
     width: 100%;
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
 }
 
 .container1 .title2 a,
@@ -168,10 +173,11 @@ a {
 .container1 .title3 a img,
 .container1 .title4 a img,
 .container1 .title5 a img {
-    object-fit: cover;
+    object-fit: fill;
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    transition:0.5s ease-in-out;
 }
 .container1 .title2 a p,
 .container1 .title3 a p,
@@ -188,7 +194,24 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.container1 .title2 a:hover p,
+.container1 .title3 a:hover p,
+.container1 .title4 a:hover p,
+.container1 .title5 a:hover p{
+    font-size: 2vw;
+    height: 100%;
+    width: 100%;
+}
+.container1 .title2 a:hover img,
+.container1 .title3 a:hover img,
+.container1 .title4 a:hover img,
+.container1 .title5 a:hover img{
+    transform: scale(1.2);
 }
 /* end container 1 */
 

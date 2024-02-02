@@ -19,9 +19,10 @@
         </ul>
     </div>
     <div class="content">
-        <h1>{{ $program['title'] }}</h1>
+        <h1>{{ $penelitian['title'] }}</h1>
         <div class="listparagraf">
-        {!! $program['content'] !!}
+            <img src="{{ asset($penelitian['image']) }}" alt="">
+        {!! $penelitian['content'] !!}
       </div>
     </div>
 </div>

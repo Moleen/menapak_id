@@ -3,10 +3,10 @@ window.addEventListener("scroll", function () {
     var currentScroll = window.scrollY || window.pageYOffset;
     const nav = document.querySelector("nav");
 
-    if (currentScroll >= 200) {
+    if (currentScroll >= 50) {
         nav.style.opacity = "0.9";
     }
-    if (currentScroll <= 200) {
+    if (currentScroll <= 50) {
         nav.style.opacity = "1";
     }
 
@@ -20,11 +20,13 @@ window.addEventListener("scroll", function () {
 });
 
 document.querySelectorAll(".nav-item").forEach((link) => {
-    const href = link.querySelector("a").getAttribute("href");
-
-    if (window.location.pathname === href) {
+    const href = link.querySelector("a").getAttribute("href").replace('/', '');
+    const path = window.location.pathname.split('/');
+    
+    if (path[1] === href) {
         link.querySelector("a").classList.add("active");
     }
+    console.log(path[1])
 });
 
 const hover = document.querySelector(".hover")

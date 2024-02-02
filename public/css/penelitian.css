@@ -8,7 +8,6 @@ body{
 
 .container-program{
     height: auto;
-    min-height: 60vh;
     width: 100%;
     display: flex;
     margin: 5vw 0;
@@ -18,9 +17,8 @@ body{
     width: 20%;
 }
 
-
 .container-program .content{
-    width: 70%;
+    width: 80%;
 }
 
 .container-program .nav ul{
@@ -36,15 +34,9 @@ body{
 }
 
 .container-program .nav ul li a{
+    color: black;
     text-decoration: none;
     font-size: 1.3vw;
-    background-color: white;
-    border: none;
-    color: black;
-}
-
-.container-program .nav ul li .active{
-    color:#548235;
 }
 
 .container-program .content h1{
@@ -63,14 +55,8 @@ body{
     padding: 2.5vw 2.5vw 0 2.5vw;
 }
 
-.container-program .content .listparagraf img{
-    width: 50%;
-    height: 30%;
-    margin-bottom: 1vw;
-}
-
 .container-program .content .listparagraf p{
     text-align: justify;
     padding-bottom: 1vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
