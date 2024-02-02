@@ -1,0 +1,28 @@
+body{
+    position: relative;
+    top: 5vw;
+}
+.program{
+    height: auto;
+    width: 100%;
+    margin: 5vw 0;
+}
+.program h1{
+    height: 5vw;
+    width: auto;
+    padding-left: 2.5vw;
+    display: flex;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.program .listparagraf{
+    background-color: #ECECEC;
+    padding: 2.5vw;
+}
+
+.program .listparagraf p{
+    text-align: justify;
+    padding-bottom: 1vw;
+    font-size: 1.5vw;
+}
