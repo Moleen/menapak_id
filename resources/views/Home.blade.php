@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('css/beranda.css')}}" />
-    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <title>Menapak Indonesia</title>
   </head>
   @include('component.navbar')
   <body>
@@ -65,14 +66,14 @@
       </div>
       <div class="sub2">
         <div class="title2">
-          <a href=""
-            ><p>Penelitian</p>
+          <a href="/program/penelitian"
+            ><p data-text="Penelitian">Penelitian</p>
             <img src="img/1.jpg" alt=""
           /></a>
         </div>
         <div class="title3">
           <a href=""
-            ><p>Pengolahan SDA</p>
+            ><p data-text="Pengolahan SDA">Pengolahan SDA</p>
             <img src="img/2.jpg" alt=""
           /></a>
         </div>

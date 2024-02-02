@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\programcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/program', function () {
-    return view('program');
-});
+
+Route::get('/program', [programcontroller::class, 'program']);
+Route::get('/program/penelitian', [programcontroller::class, 'penelitian']);
+
+
 Route::get('/about', function () {
     return view('program');
 });
