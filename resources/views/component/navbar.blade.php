@@ -12,8 +12,8 @@
 ></script>
 <nav>
   <div class="logo">
-    <a href="" class=""><img src="{{asset('img/logo.png')}}" /></a>
-    <p><a href="">Berjalan sambil membuat jalan</a></p>
+    <a href="/" class=""><img src="{{asset('img/logo.png')}}" /></a>
+    <p><a href="/">Berjalan sambil membuat jalan</a></p>
   </div>
 
   <div class="menu-icon">
