@@ -19,6 +19,9 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/program', [programcontroller::class, 'program']);
 Route::get('/program/penelitian', [programcontroller::class, 'penelitian']);
+Route::get('/program/pengelolaan-sda', [programcontroller::class, 'pengelolaan']);
+Route::get('/program/peningkatan-kapasitas', [programcontroller::class, 'peningkatan']);
+Route::get('/program/advokasi-kebijakan', [programcontroller::class, 'advokasi']);
 
 
 Route::get('/about', function () {

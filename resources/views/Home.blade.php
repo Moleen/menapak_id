@@ -54,8 +54,8 @@
           </a>
         </div>
       </div>
-      <button class="prev-btn"><</button>
-      <button class="next-btn">></button>
+      <button class="prev-btn"><i class="fa-solid fa-angle-left "></i></button>
+      <button class="next-btn"><i class="fa-solid fa-angle-right "></i></button>
     </div>
     <div class="container1">
       <div class="sub1">
@@ -72,7 +72,7 @@
           /></a>
         </div>
         <div class="title3">
-          <a href=""
+          <a href="/program/pengelolaan-sda"
             ><p data-text="Pengolahan SDA">Pengolahan SDA</p>
             <img src="img/2.jpg" alt=""
           /></a>
@@ -80,13 +80,13 @@
       </div>
       <div class="sub3">
         <div class="title4">
-          <a href=""
+          <a href="/program/peningkatan-kapasitas"
             ><p>Peningkatan Kapasitas</p>
             <img src="img/3.jpg" alt=""
           /></a>
         </div>
         <div class="title5">
-          <a href=""
+          <a href="/program/advokasi-kebijakan"
             ><p>Advokasi Kebijakan</p>
             <img src="img/1.jpg" alt=""
           /></a>
