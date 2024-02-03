@@ -342,6 +342,7 @@ a {
     width: 100%;
     background-color: #385723;
     border-radius: 10px;
+    transition: all 0.25s ease-in-out;
 }
 
 .container2 .sub2 .title2 a,
@@ -356,6 +357,7 @@ a {
 .container2 .sub2 .title2 a h1,
 .container2 .sub2 .title3 a h1 {
     font-size: 1.5vw;
+    transition: all 0.25s ease-in-out;
 }
 .container2 .sub3 h1 {
     padding: 5%;
@@ -495,4 +497,14 @@ padding: 3%;
 font-size: 1.1vw;
 background-color: rgba(0, 0, 0, 0.61);
 color: white;
+}
+
+.container2 .sub2 .title2 a:hover h1,
+.container2 .sub2 .title3 a:hover h1{
+    font-size: 1.7vw;
+}
+
+.container2 .sub2 .title2:hover ,
+.container2 .sub2 .title3:hover {
+    box-shadow: 0 0 0.5rem 0.01rem rgb(2, 58, 19);
 }

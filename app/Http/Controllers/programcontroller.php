@@ -56,43 +56,71 @@ class programcontroller extends Controller
             serta mendukung usaha mikro dan kecil di sekitar area wisata.
           </p>'
         ] ;
-        return view('program', ['program' => $program]);
+        return view('program1', ['program' => $program]);
     }
 
-    public function penelitian(){
-      $penelitian = [
-        'title' => 'Penelitian',
-        'image' => 'img/3.jpg',
+    // public function penelitian(){
+    //   $penelitian = [
+    //     'title' => 'Penelitian',
+    //     'image' => 'img/3.jpg',
+    //     'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
+    //   ];
+    //   return view('program.penelitian', ['penelitian' => $penelitian]);
+    // }
+    // public function pengelolaan(){
+    //   $pengelolaan = [
+    //     'title' => 'Pengelolaan SDA',
+    //     'image' => 'img/2.jpg',
+    //     'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
+    //   ];
+    //   return view('program.pengelolaan', ['pengelolaan' => $pengelolaan]);
+    // }
+    // public function peningkatan(){
+    //   $peningkatan = [
+    //     'title' => 'Peningkatan SDA',
+    //     'image' => 'img/2.jpg',
+    //     'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
+    //   ];
+    //   return view('program.peningkatan', ['peningkatan' => $peningkatan]);
+    // }
+    // public function advokasi(){
+    //   $advokasi = [
+    //     'title' => 'advokasi SDA',
+    //     'image' => 'img/2.jpg',
+    //     'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
+    //   ];
+    //   return view('program.advokasi', ['advokasi' => $advokasi]);
+    // }
+
+        public function ProdukKomunitas(){
+      $ProdukKomunitas = [
+        'title' => 'Produk Komunitas',
+        'image' => 'img/1.jpg',
         'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
       ];
-      return view('program.penelitian', ['penelitian' => $penelitian]);
+      return view('program1.ProdukKomunitas', ['ProdukKomunitas' => $ProdukKomunitas]);
     }
-    public function pengelolaan(){
-      $pengelolaan = [
-        'title' => 'Pengelolaan SDA',
-        'image' => 'img/2.jpg',
+        public function ProdukPengetahuan(){
+      $ProdukPengetahuan = [
+        'title' => 'Produk Pengetahuan',
+        'image' => 'img/1.jpg',
         'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
       ];
-      return view('program.pengelolaan', ['pengelolaan' => $pengelolaan]);
+      return view('program1.ProdukPengetahuan', ['ProdukPengetahuan' => $ProdukPengetahuan]);
     }
-    public function peningkatan(){
-      $peningkatan = [
-        'title' => 'Peningkatan SDA',
-        'image' => 'img/2.jpg',
+        public function WilayahKerja(){
+      $WilayahKerja = [
+        'title' => 'Wilayah Kerja',
+        'image' => 'img/1.jpg',
         'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
       ];
-      return view('program.peningkatan', ['peningkatan' => $peningkatan]);
-    }
-    public function advokasi(){
-      $advokasi = [
-        'title' => 'advokasi SDA',
-        'image' => 'img/2.jpg',
-        'content' => '<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>'
-      ];
-      return view('program.advokasi', ['advokasi' => $advokasi]);
+      return view('program1.WilayahKerja', ['WilayahKerja' => $WilayahKerja]);
     }
 }
