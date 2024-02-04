@@ -31,4 +31,10 @@ Route::get('/program/Wilayah-Kerja', [programcontroller::class, 'WilayahKerja'])
 Route::get('/about', function () {
     return view('program');
 });
+Route::get('/artikel', function () {
+    return view('artikel');
+});
+Route::get('/berita', function () {
+    return view('berita');
+});
 
