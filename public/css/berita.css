@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    position: relative;
+    top: 5vw;
+}
+
+.maincontainerberita{
+    height: auto;
+}
+
+.maincontainerberita h1{
+    font-size: 3.5vw;
+    padding: 2.5vw 0;
+    text-align: center;
+    color: #548235;
+}
+
+.subcontainerberita{
+    margin: auto;
+    margin-bottom: 5VW;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+}
+
+.berita{
+    height: 15vw;
+    width: 100%;
+    margin: 1vw auto;
+    display: flex;
+}
+
+.berita .imageberitacontainer{
+    height: 90%;
+    width: 25%;
+    margin: auto 1vw ;
+}
+
+.berita .imageberitacontainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5vw;
+}
+
+.berita .contentberitacontainer{
+    position: relative;
+    height: auto;
+    width: 75%;
+    margin: auto 1vw ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.berita .contentberitacontainer h2{
+    padding: 0;
+    text-align: left;
+}
+
+.tanggal{
+    display: flex;
+    margin: 1vw 0;
+}
+
+.tanggal p{
+    font-size: 1vw;
+    margin-right: 1vw;
+}
+
+
+
+.link a{
+    display: inline-block;
+    padding: 1vw;
+    margin-right: 1vw;
+    background-color:#548235;
+    bottom: 0;
+    text-decoration: none;
+    border-radius: 0.25vw;
+    color: white;
+}
