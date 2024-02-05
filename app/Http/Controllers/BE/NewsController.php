@@ -10,22 +10,27 @@ use Illuminate\Support\Facades\Storage;
 class NewsController extends Controller
 {
     public function index(){
-        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->get();
+        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->select('*')->get();
 
-        $data = [];
+        // $data = [];
 
-        foreach ($news as $baru) {
-            $data[] = [
-                'news_title' => $baru->news_title,
-                'news_details' => $baru->news_details,
-                'slug' => $baru->slug,
-                'published_date' => $baru->published_date,
-                'dibaca' => $baru->dibaca,
-                'updated_at' => $baru->updated_at,
-            ];
-        }
+        // foreach ($news as $baru) {
+        //     $data[] = [
+        //         'news_title' => $baru->news_title,
+        //         'news_details' => $baru->news_details,
+        //         'slug' => $baru->slug,
+        //         'published_date' => $baru->published_date,
+        //         'dibaca' => $baru->dibaca,
+        //         'updated_at' => $baru->updated_at,
+        //     ];
+        // }
 
-        return $data;
+        return $news;
+    }
+
+    public function limit5(){
+        $news = News::select('*')->take(5)->get();
+        return $news;
     }
 
     function add(Request $request){
