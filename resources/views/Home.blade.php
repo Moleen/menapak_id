@@ -82,8 +82,8 @@
       </div>
       <div class="sub3">
         <div class="title4">
-          <a href="/program/peningkatan-kapasitas"
-            ><p>Peningkatan Kapasitas</p>
+          <a href="/program/peningkatan-kapasitas">
+            <p>Peningkatan Kapasitas</p>
             <img src="img/3.jpg" alt=""
           /></a>
         </div>
