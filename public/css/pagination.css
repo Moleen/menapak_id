@@ -1,0 +1,38 @@
+/* berita.css */
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .pagination-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination .pagination-list .page-item {
+    margin-right: 5px;
+}
+
+.pagination .pagination-list .page-item .page-link {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pagination .pagination-list .page-item .page-link:hover {
+    background-color: #eee;
+}
+
+.pagination .pagination-list .page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}

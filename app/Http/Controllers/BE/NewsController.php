@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class NewsController extends Controller
 {
     public function index(){
-        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->select('*')->get();
+        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->select('*')->paginate(5);
 
         // $data = [];
 
@@ -28,10 +28,11 @@ class NewsController extends Controller
         return $news;
     }
 
-    public function limit5(){
-        $news = News::select('*')->take(5)->get();
+    public function limit5Populer() {
+        $news = News::where('dibaca', '>', 60)->orderByDesc('dibaca')->take(5)->get();
         return $news;
     }
+
 
     function add(Request $request){
         $news_title = $request->input('news_title');

@@ -11,16 +11,16 @@
     <div class="maincontainerartikel">
       <h1>artikel</h1>
       <div class="subcontainerartikel">
-<!-- loop -->
+@foreach($data as $item)
         <div class="artikel">
             <div class="imageartikelcontainer">
                 <img src="{{asset('img/2.jpg')}}" />
             </div>
             <div class="contentartikelcontainer">
-                <h2>Judul Artikel</h2>
+                <h2>{{$item->article_title}}</h2>
                 <div class="tanggal">
-                    <p>menapak Indonesia |</p><br>
-                    <p> 01 01 2024</p>
+                    <p>{{$item->nama_admin}} |</p><br>
+                    <p> {{$item->published_date}}</p>
                 </div>
                 <div class="link">
                     <a href="" class="lihat">Lihat</a>
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-<!-- end loop -->
+@endforeach
       </div>
     </div>
     @include('component.footer')

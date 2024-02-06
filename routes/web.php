@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\programcontroller;
+use App\Http\Controllers\BeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,7 +35,4 @@ Route::get('/about', function () {
 Route::get('/artikel', function () {
     return view('artikel');
 });
-Route::get('/berita', function () {
-    return view('berita');
-});
-
+Route::get('/berita', [BeritaController::class, 'index']);
