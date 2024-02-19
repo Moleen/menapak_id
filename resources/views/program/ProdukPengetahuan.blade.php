@@ -18,11 +18,15 @@
         </ul>
     </div>
     <div class="content">
-        <h1>{{ $ProdukKomunitas['title'] }}</h1>
-        <div class="listparagraf">
-            <img src="{{ asset($ProdukKomunitas['image']) }}" alt="">
-        {!! $ProdukKomunitas['content'] !!}
-      </div>
+        <div class="listprodukkomunitas">
+            <div class="produk">
+                <h2>Lorem ipsum</h2>
+                <a href="">
+                    <img src="{{asset('img/1.jpg')}}" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores obcaecati, </p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 </body>

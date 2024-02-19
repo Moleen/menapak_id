@@ -1,0 +1,163 @@
+body {
+    height: auto;
+    position: relative;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.containerTentang {
+    margin-top: 10vw;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.navTentang {
+    height: auto;
+    width: 20%;
+    border-right: 1px solid black;
+}
+
+.navTentang ul {
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navTentang ul li {
+    width: auto;
+    margin: 1vw auto;
+    list-style: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+.navTentang ul li.active {
+    color: #548235;
+}
+.contentTentang {
+    height: auto;
+    width: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentTentang h1 {
+    padding-bottom: 2vw;
+}
+.contentTentang p,
+.contentTentang ul {
+    padding-bottom: 2.5vw;
+    text-align: justify;
+}
+.contentTentang .sejarah,
+.contentTentang .kegiatanKami,
+.contentTentang .organisasi {
+    height: auto;
+    margin: 0 5vw;
+}
+
+.contentTentang .kegiatanKami {
+    min-height: 100%;
+}
+.contentTentang .containerKegiatan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.containerKegiatan .kegiatan {
+    height: 30vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kegiatan .content {
+    width: 100%;
+    height: 45%;
+    background-color: antiquewhite;
+}
+
+.containerartikel {
+    height: 30vh;
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerartikel .artikel {
+    height: 100%;
+    width: 100%;
+}
+
+.artikel h1 {
+    padding-bottom: 1vw;
+}
+
+.subcontainerartikel {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.subcontainerartikel .content {
+    height: 85%;
+    width: 27.5%;
+    border: 0.5vh solid rgba(0, 0, 0, 0.351);
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+}
+
+.subcontainerartikel .content img {
+    height: 60%;
+    width: 50%;
+    margin-bottom: 1%;
+}
+
+.subcontainerartikel .content p {
+    color: black;
+    font-size: 1.2vw;
+}
+
+.subcontainerartikel span {
+    position: absolute;
+    bottom: -5vh;
+    right: 0;
+    padding: 1.5vh;
+    background-color: #548235;
+    border-radius: 2vh;
+    font-size: 1vw;
+}
+
+.artikel .subcontainerartikel {
+    height: 80%;
+}
+
+@media only screen and (max-width: 900px) {
+    .containerTentang {
+        margin-top: 15vw;
+    }
+    .navTentang ul li {
+        font-size: 2.5vw;
+    }
+    .contentTentang p,
+    .containerTentang ul {
+        font-size: 2.5vw;
+    }
+    .contentTentang h1 {
+        font-size: 3vw;
+    }
+}

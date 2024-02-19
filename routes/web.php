@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\programcontroller;
+use App\Http\Controllers\kegiatan;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,24 +18,35 @@ use App\Http\Controllers\programcontroller;
 
 Route::get('/', [HomeController::class, 'index']);
 
-// Route::get('/program', [programcontroller::class, 'program']);
-// Route::get('/program/penelitian', [programcontroller::class, 'penelitian']);
-// Route::get('/program/pengelolaan-sda', [programcontroller::class, 'pengelolaan']);
-// Route::get('/program/peningkatan-kapasitas', [programcontroller::class, 'peningkatan']);
-// Route::get('/program/advokasi-kebijakan', [programcontroller::class, 'advokasi']);
+Route::get('/tata-kelola-kawasan', [kegiatan::class, 'tatakelola']);
+Route::get('/penelitian', [kegiatan::class, 'penelitian']);
+Route::get('/pengelolaan-sda', [kegiatan::class, 'pengelolaan']);
+Route::get('/peningkatan-kapasitas', [kegiatan::class, 'peningkatan']);
+Route::get('/advokasi-kebijakan', [kegiatan::class, 'advokasi']);
 
 Route::get('/program', [programcontroller::class, 'program']);
 Route::get('/program/Produk-Komunitas', [programcontroller::class, 'ProdukKomunitas']);
 Route::get('/program/Produk-Pengetahuan', [programcontroller::class, 'ProdukPengetahuan']);
 Route::get('/program/Wilayah-Kerja', [programcontroller::class, 'WilayahKerja']);
 
+
+
 Route::get('/about', function () {
-    return view('program');
+    return view('about');
 });
 Route::get('/artikel', function () {
     return view('artikel');
 });
+Route::get('/about/{page}', function ($page) {
+    return view('about',['page' => $page]);
+});
 Route::get('/berita', function () {
     return view('berita');
+});
+Route::get('/publikasi', function () {
+    return view('publikasi');
+});
+Route::get('/artikel', function () {
+    return view('artikel');
 });
 

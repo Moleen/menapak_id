@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/program.css')}}">
-    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <title>Menapak Indonesia</title>
 </head>
 @include('component.navbar')
 <body>
@@ -18,10 +19,15 @@
         </ul>
     </div>
     <div class="content">
-        <h1>{{ $program['title'] }}</h1>
-        <div class="listparagraf">
-        {!! $program['content'] !!}
-      </div>
+        <div class="listprodukkomunitas">
+        <div class="produk">
+                <h2>Lorem ipsum</h2>
+                <a href="">
+                    <img src="{{asset('img/1.jpg')}}" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos asperiores obcaecati, </p>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 </body>
