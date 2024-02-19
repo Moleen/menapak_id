@@ -34,7 +34,9 @@
       <div class="sub1">
         <a class="title1" href="/tata-kelola-kawasan">
           <h2>Tata Kelola Kawasan</h2>
-          <div class="kawasan"></div>
+          <div class="kawasan">
+            <img src="{{asset('img/tkk.png')}}" style="width: 436px; height: 100%;" alt="" />
+          </div>
         </a>
       </div>
       <div class="sub2">
@@ -72,27 +74,26 @@
       <div class="sub1">
         <h2 class="judulsub">Berita</h2>
         <div class="continerberita">
-          @if ($data) 
-            @foreach($data as $dt)
-          <div class="berita">
-            <a href="" class="imagehref"><img src="img/1.jpg" alt="" /></a>
-            <a href="{{url('news/' . $dt['slug'])}}" class="judulhref">
-              <h1>{{$dt['news_title']}}</h1>
-              <p>{{substr($dt['news_details'],0,100)}}...</p>
-              <div class="calendar">
-                <p>
-                  <i class="fa-regular fa-calendar-days"></i>
-                  {{$dt['published_date']}}
-                </p>
-                <p><i class="fa-regular fa-eye"></i> x1</p>
-              </div>
-            </a>
-          </div>
-          @endforeach @else
-          <p>No data available.</p>
-          @endif
+          @forelse($data as $dt)
+            <div class="berita">
+                <a href="" class="imagehref"><img src="img/1.jpg" alt="" /></a>
+                <a href="{{url('news/' . $dt['slug'])}}" class="judulhref">
+                <h1>{{$dt['news_title']}}</h1>
+                <p>{{substr($dt['news_details'],0,100)}}...</p>
+                <div class="calendar">
+                    <p>
+                    <i class="fa-regular fa-calendar-days"></i>
+                    {{$dt['published_date']}}
+                    </p>
+                    <p><i class="fa-regular fa-eye"></i> x{{$dt->dibaca}}</p>
+                </div>
+                </a>
+            </div>
+          @empty
+          <p style="padding: 50px; color: #fff;">Hanya berita populer yang ditampilkan.</p>
+          @endforelse
         </div>
-        <a href="/berita" class="selengkap"
+        <a href="{{url('/berita')}}" class="selengkap"
           >selengkapnya<i class="fa-solid fa-chevron-right fa-1x"></i></a>
       </div>
       <div class="sub2">
@@ -119,5 +120,5 @@
     </div>
   </body>
   @include('component.footer')
-  <script src="js/beranda.js"></script>
+  <script src="{{asset('js/beranda.js')}}"></script>
 </html>

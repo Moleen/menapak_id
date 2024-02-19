@@ -5,12 +5,17 @@ namespace App\Http\Controllers\BE;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\News;
+use App\Models\KategoriBerita;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class NewsController extends Controller
 {
     public function index(){
-        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')->select('*')->get();
+        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')
+        ->join('admin','admin.id_admin','=','news.id_admin')
+        ->where('news_status','Publish')
+        ->select('*')->paginate(5);
 
         // $data = [];
 
@@ -28,24 +33,40 @@ class NewsController extends Controller
         return $news;
     }
 
-    public function limit5(){
-        $news = News::select('*')->take(5)->get();
+    public function limit5Populer() {
+        $news = News::join('kategori_berita', 'kategori_berita.id_kategori', '=', 'news.id_kategori')
+        ->join('admin','admin.id_admin','=','news.id_admin')
+        ->where('dibaca', '>', 60)->orderByDesc('dibaca')->take(5)->get();
         return $news;
     }
 
-    function add(Request $request){
+
+    function add(Request $request)
+    {
         $news_title = $request->input('news_title');
         $kecil = strtolower($news_title);
-        $slug = str_replace(' ','-', $kecil);
+        $slug = str_replace(' ', '-', $kecil);
         $news_details = $request->input('news_details');
         $id_kategori = $request->input('id_kategori');
         $id_admin = $request->input('id_admin');
-        $published_date = today();
+        $news_status = $request->input('news_status');
+        $published_date = $request->input('published_date');
         $thumbnail = $request->file('thumbnail');
 
+        $kategorii = KategoriBerita::where('id_kategori', $id_kategori)->first();
         $thumb = $thumbnail->getClientOriginalName();
 
-        Storage::put('img/news/' . $thumb, file_get_contents($thumbnail));
+        $kategori = strtolower($kategorii->nama_kategori);
+        $ktg = str_replace(' ','_', $kategori);
+
+            $folderPath = public_path() . '/img/news/' . $ktg . '/';
+
+            if (!File::exists($folderPath)) {
+                File::makeDirectory($folderPath, 0755, true, true);
+                $thumbnail->move($folderPath, $thumb);
+            }else{
+                $thumbnail->move($folderPath, $thumb);
+            }
 
         $news = new News;
         $news->news_title = $news_title;
@@ -53,11 +74,16 @@ class NewsController extends Controller
         $news->news_details = $news_details;
         $news->id_kategori = $id_kategori;
         $news->id_admin = $id_admin;
+        $news->news_status = $news_status;
         $news->published_date = $published_date;
+        $news->dibaca = 0;
         $news->thumbnail = $thumb;
         $news->save();
 
-        return $news;
+        return response()->json([
+            'message' => 'News berhasil ditambahkan!',
+            'data' => $news,
+        ], 200);
     }
 
     function detail($slug){

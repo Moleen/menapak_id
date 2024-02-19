@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\programcontroller;
 use App\Http\Controllers\kegiatan;
+use App\Http\Controllers\BeritaController;
 
 /*
 |--------------------------------------------------------------------------

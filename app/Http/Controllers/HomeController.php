@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $berita = new NewsController;
-        $data = $berita->index();
+        $data = $berita->limit5Populer();
         return view('home', ['data' => $data]);
     }
 }
