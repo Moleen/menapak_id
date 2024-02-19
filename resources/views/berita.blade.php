@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('css/berita.css')}}" />
     <link rel="stylesheet" href="{{asset('css/pagination.css')}}" />
-    <title>Document</title>
+    <title>{{$judul}}</title>
   </head>
   <body>
     @include('component.navbar')
     <div class="maincontainerberita">
       <h1>berita</h1>
       <div class="subcontainerberita">
-        @foreach($data as $item)
+        @forelse($data as $item)
+        @php
+        $lowerkategori = strtolower($item->nama_kategori);
+        $ktg = str_replace(" ", "_", $lowerkategori);
+        @endphp
+        <a href="{{url('/berita/' . $item->slug)}}" style="text-decoration: none; color: black;">
         <div class="berita">
             <div class="imageberitacontainer">
-                <img src="{{asset('img/2.jpg')}}" />
+                @if($item->thumbnail != null)
+                <img src="{{asset('img/news/' . $ktg . '/' . $item->thumbnail)}}" />
+                @else
+                <img src="{{asset('img/1.jpg')}}" />
+                @endif
             </div>
             <div class="contentberitacontainer">
                 <h2>{{$item->news_title}}</h2>
                 <div class="tanggal">
-                    <p>menapak Indonesia | {{date('l, d F Y', strtotime($item->published_date))}}</p>
+                    <p>{{$item->nama_admin}} | {{date('l, d F Y', strtotime($item->created_at))}}</p>
                 </div>
                 @if(mb_strlen($item->news_details) > 150)
                 <p>{{$item->news_details}}...</p>
@@ -29,6 +38,7 @@
                 @endif
             </div>
         </div>
+    </a>
         @endforeach
       </div>
         <div class="pagination">

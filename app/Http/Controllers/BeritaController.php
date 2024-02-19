@@ -10,6 +10,7 @@ class BeritaController extends Controller
     public function index(){
         $berita = new NewsController;
         $data = $berita->index();
-        return view('berita', compact('data'));
+        $judul = "Berita - Menapak Indonesia";
+        return view('berita', compact('data','judul'));
     }
 }

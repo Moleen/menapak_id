@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\BE\NewsController;
+use App\Http\Controllers\Api\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::post('/news/add', [NewsController::class, 'add']);
 Route::get('/news/{slug}', [NewsController::class, 'detail']);
 Route::post('/news/edit/{id_news}', [NewsController::class, 'edit']);
 Route::delete('/news/del/{id_news}', [NewsController::class, 'delete']);
+
+Route::post('/admin/add', [AdminController::class, 'add']);
