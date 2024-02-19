@@ -45,25 +45,40 @@ a {
     overflow: hidden;
 }
 .slide .title {
+    flex-direction: column;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 50%;
-    height: 25%;
+    height: 30%;
     position: absolute;
-    bottom: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    bottom: 5%;
+    left: 5%;
     background-color: rgba(0, 0, 0, 0.404);
     color: white;
     border-radius: 10px;
 }
 
 .slide .title p {
+    position: absolute;
     text-align: justify;
-    height: 70%;
-    width: 85%;
+    padding: 3%;
+    height: 60%;
+    width: auto;
     font-size: 1.2vw;
+}
+.slide .title .fa-angle-right{
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 2VW;
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    transition: ease-in-out 0.25s;
 }
 
 .slide img {
@@ -367,13 +382,14 @@ a {
     border-radius: 10px 10px 0 0;
     font-size: 1.5vw;
 }
-
+@media only screen and (max-width: 720px) {
+    .slide .title p {
+        font-size: 1.5vw;
+    }
+}
 @media only screen and (max-width: 900px) {
     .slide img {
         height: 35vh;
-    }
-    .slide .title p {
-        font-size: 1.5vw;
     }
 
     .container1,
@@ -448,6 +464,10 @@ a {
 
 
 /* hover */
+
+.slide .title:hover .fa-angle-right{
+    right: 2.5%;
+}
 
 .prev-btn:hover,
 .next-btn:hover{

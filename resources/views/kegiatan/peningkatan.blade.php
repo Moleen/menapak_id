@@ -11,11 +11,11 @@
 <div class="container-program">
     <div class="nav">
         <ul>
-            <li><a href="/program" class="a">Program</a></li>
-            <li><a href="/program/penelitian" class="a">Penelitian</a></li>
-            <li><a href="/program/pengelolaan-sda" class="a">pengelolaan SDA</a></li>
-            <li><a href="/program/peningkatan-kapasitas" class="a">Peningkatan Kapasitas</a></li>
-            <li><a href="/program/advokasi-kebijakan" class="a">Advokasi Kebijakan</a></li>
+            <li><a href="/tata-kelola-kawasan" class="a">Tata Kelola Kawasan</a></li>
+            <li><a href="/penelitian" class="a">Penelitian</a></li>
+            <li><a href="/pengelolaan-sda" class="a">pengelolaan SDA</a></li>
+            <li><a href="/peningkatan-kapasitas" class="a">Peningkatan Kapasitas</a></li>
+            <li><a href="/advokasi-kebijakan" class="a">Advokasi Kebijakan</a></li>
         </ul>
     </div>
     <div class="content">

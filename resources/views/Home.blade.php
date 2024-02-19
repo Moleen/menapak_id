@@ -21,34 +21,7 @@
                 printer took a galley of type and scrambled it to make a type
                 specimen book.
               </p>
-            </div>
-            <img src="{{asset('img/1.jpg')}}" alt="Image 1" />
-          </a>
-        </div>
-        <div class="slide">
-          <a href="">
-            <div class="title">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing an d
-                typesetting industry. Lorem Ipsum has been the indu stry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book.
-              </p>
-            </div>
-            <img src="{{asset('img/2.jpg')}}" alt="Image 2" />
-          </a>
-        </div>
-        <div class="slide">
-          <a href="">
-            <div class="title">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing an d
-                typesetting industry. Lorem Ipsum has been the indu stry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book.
-              </p>
+              <i class="fa-solid fa-angle-right "></i>
             </div>
             <img src="{{asset('img/3.jpg')}}" alt="Image 3" />
           </a>
@@ -59,7 +32,7 @@
     </div>
     <div class="container1">
       <div class="sub1">
-        <a class="title1" href="">
+        <a class="title1" href="/tata-kelola-kawasan">
           <h2>Tata Kelola Kawasan</h2>
           <div class="kawasan">
             <img src="{{asset('img/tkk.png')}}" style="width: 436px; height: 100%;" alt="" />
@@ -68,13 +41,13 @@
       </div>
       <div class="sub2">
         <div class="title2">
-          <a href="/program/penelitian"
+          <a href="/penelitian"
             ><p data-text="Penelitian">Penelitian</p>
             <img src="img/1.jpg" alt=""
           /></a>
         </div>
         <div class="title3">
-          <a href="/program/pengelolaan-sda"
+          <a href="/pengelolaan-sda"
             ><p data-text="Pengolahan SDA">Pengolahan SDA</p>
             <img src="img/2.jpg" alt=""
           /></a>
@@ -82,13 +55,13 @@
       </div>
       <div class="sub3">
         <div class="title4">
-          <a href="/program/peningkatan-kapasitas">
-            <p>Peningkatan Kapasitas</p>
+          <a href="/peningkatan-kapasitas"
+            ><p>Peningkatan Kapasitas</p>
             <img src="img/3.jpg" alt=""
           /></a>
         </div>
         <div class="title5">
-          <a href="/program/advokasi-kebijakan"
+          <a href="/advokasi-kebijakan"
             ><p>Advokasi Kebijakan</p>
             <img src="img/1.jpg" alt=""
           /></a>
@@ -126,16 +99,16 @@
       <div class="sub2">
         <div class="title1">
           <h2>Produk Komunitas</h2>
-          <a href="">
+          <a href="/program/Produk-Komunitas">
             <img src="img/1.jpg" alt="">
             <p>Lihat lebih banyak</p>
           </a>
         </div>
         <div class="title2">
-          <a href=""><h1>Produk Pengetahuan</h1></a>
+          <a href="/program/Produk-Pengetahuan"><h1>Produk Pengetahuan</h1></a>
         </div>
         <div class="title3">
-          <a href=""><h1>Wilayah Kerja</h1></a>
+          <a href="/program/Wilayah-Kerja"><h1>Wilayah Kerja</h1></a>
         </div>
       </div>
       <div class="sub3">

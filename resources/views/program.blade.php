@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/program.css')}}">
-    <title>Document</title>
+    <link rel="icon" href="img/logo.png">
+    <title>Menapak Indonesia</title>
 </head>
 @include('component.navbar')
 <body>
@@ -12,10 +13,9 @@
     <div class="nav">
         <ul>
             <li><a href="/program" class="a">Program</a></li>
-            <li><a href="/program/penelitian" class="a">Penelitian</a></li>
-            <li><a href="/program/pengelolaan-sda" class="a">pengelolaan SDA</a></li>
-            <li><a href="/program/peningkatan-kapasitas" class="a">Peningkatan Kapasitas</a></li>
-            <li><a href="/program/advokasi-kebijakan" class="a">Advokasi Kebijakan</a></li>
+            <li><a href="/program/Produk-Komunitas" class="a">Produk Komunitas</a></li>
+            <li><a href="/program/Produk-Pengetahuan" class="a">Produk Pengetahuan</a></li>
+            <li><a href="/program/Wilayah-Kerja" class="a">Wilayah Kerja</a></li>
         </ul>
     </div>
     <div class="content">
