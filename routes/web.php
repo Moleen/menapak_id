@@ -41,9 +41,7 @@ Route::get('/artikel', function () {
 Route::get('/about/{page}', function ($page) {
     return view('about',['page' => $page]);
 });
-Route::get('/berita', function () {
-    return view('berita');
-});
+Route::get('/berita', [BeritaController::class, 'index']);
 Route::get('/publikasi', function () {
     return view('publikasi');
 });
