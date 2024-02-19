@@ -11,17 +11,18 @@
 <div class="container-program">
     <div class="nav">
         <ul>
-            <li><a href="/program" class="a">Program</a></li>
-            <li><a href="/program/Produk-Komunitas" class="a">Produk Komunitas</a></li>
-            <li><a href="/program/Produk-Pengetahuan" class="a">Produk Pengetahuan</a></li>
-            <li><a href="/program/Wilayah-Kerja" class="a">Wilayah Kerja</a></li>
+        <li><a href="/tata-kelola-kawasan" class="a">Tata Kelola Kawasan</a></li>
+            <li><a href="/penelitian" class="a">Penelitian</a></li>
+            <li><a href="/pengelolaan-sda" class="a">pengelolaan SDA</a></li>
+            <li><a href="/peningkatan-kapasitas" class="a">Peningkatan Kapasitas</a></li>
+            <li><a href="/advokasi-kebijakan" class="a">Advokasi Kebijakan</a></li>
         </ul>
     </div>
     <div class="content">
-        <h1>{{ $ProdukPengetahuan['title'] }}</h1>
+        <h1>{{ $advokasi['title'] }}</h1>
         <div class="listparagraf">
-            <img src="{{ asset($ProdukPengetahuan['image']) }}" alt="">
-        {!! $ProdukPengetahuan['content'] !!}
+            <img src="{{ asset($advokasi['image']) }}" alt="">
+        {!! $advokasi['content'] !!}
       </div>
     </div>
 </div>
