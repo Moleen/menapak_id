@@ -1,7 +1,7 @@
 /* berita.css */
 
 .pagination {
-    margin-top: 20px;
+    margin: 2.5vh;
     display: flex;
     justify-content: center;
 }
@@ -24,7 +24,8 @@
     text-decoration: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition:  0.3s;
+    cursor: pointer;
 }
 
 .pagination .pagination-list .page-item .page-link:hover {
@@ -32,7 +33,6 @@
 }
 
 .pagination .pagination-list .page-item.active .page-link {
-    background-color: #007bff;
+    background-color: #548235;
     color: #fff;
-    border: 1px solid #007bff;
 }

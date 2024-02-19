@@ -35,7 +35,7 @@
         <a class="title1" href="/tata-kelola-kawasan">
           <h2>Tata Kelola Kawasan</h2>
           <div class="kawasan">
-            <img src="{{asset('img/tkk.png')}}" style="width: 436px; height: 100%;" alt="" />
+            <img src="{{asset('img/tkk.png')}}" style="width: 100%; height: 100%; object-fit:fill;" alt="" />
           </div>
         </a>
       </div>

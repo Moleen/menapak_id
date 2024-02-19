@@ -24,7 +24,7 @@ body{
     margin-bottom: 5VW;
     display: flex;
     flex-direction: column;
-    height: auto;
+    min-height: 56vh;
     width: 90%;
 }
 
@@ -83,4 +83,11 @@ body{
     text-decoration: none;
     border-radius: 0.25vw;
     color: white;
+}
+
+@media only screen and (max-width: 900px){
+    .maincontainerberita{
+        position: relative;
+        top: 5vw;
+    }
 }

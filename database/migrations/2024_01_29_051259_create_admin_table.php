@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('nama_admin');
             $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

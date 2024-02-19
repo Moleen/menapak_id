@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id_pengunjung');
             $table->text('ip_address');
             $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

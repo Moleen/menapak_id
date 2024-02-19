@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('dibaca')->default(0);
             $table->text('thumbnail')->nullable();
             $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

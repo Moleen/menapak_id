@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('status_kegiatan');
             $table->text('foto_kegiatan');
             $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

@@ -46,11 +46,11 @@
             <ul class="pagination-list">
                 @if ($data->onFirstPage())
                     <li class="page-item disabled">
-                        <span class="page-link">&laquo; Previous</span>
+                        <span class="page-link">&laquo; </span>
                     </li>
                 @else
                     <li class="page-item">
-                        <a href="{{ $data->previousPageUrl() }}" class="page-link" rel="prev">&laquo; Previous</a>
+                        <a href="{{ $data->previousPageUrl() }}" class="page-link" rel="prev">&laquo; </a>
                     </li>
                 @endif
 
@@ -62,11 +62,11 @@
 
                 @if ($data->hasMorePages())
                     <li class="page-item">
-                        <a href="{{ $data->nextPageUrl() }}" class="page-link" rel="next">Next &raquo;</a>
+                        <a href="{{ $data->nextPageUrl() }}" class="page-link" rel="next"> &raquo;</a>
                     </li>
                 @else
                     <li class="page-item disabled">
-                        <span class="page-link">Next &raquo;</span>
+                        <span class="page-link"> &raquo;</span>
                     </li>
                 @endif
             </ul>

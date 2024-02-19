@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id_kategori');
             $table->string('nama_kategori');
             $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
