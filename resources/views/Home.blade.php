@@ -26,6 +26,36 @@
             <img src="{{asset('img/3.jpg')}}" alt="Image 3" />
           </a>
         </div>
+        <div class="slide">
+          <a href="">
+            <div class="title">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing an d
+                typesetting industry. Lorem Ipsum has been the indu stry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book.
+              </p>
+              <i class="fa-solid fa-angle-right "></i>
+            </div>
+            <img src="{{asset('img/3.jpg')}}" alt="Image 3" />
+          </a>
+        </div>
+        <div class="slide">
+          <a href="">
+            <div class="title">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing an d
+                typesetting industry. Lorem Ipsum has been the indu stry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type
+                specimen book.
+              </p>
+              <i class="fa-solid fa-angle-right "></i>
+            </div>
+            <img src="{{asset('img/3.jpg')}}" alt="Image 3" />
+          </a>
+        </div>
       </div>
       <button class="prev-btn"><i class="fa-solid fa-angle-left "></i></button>
       <button class="next-btn"><i class="fa-solid fa-angle-right "></i></button>
